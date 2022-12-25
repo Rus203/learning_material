@@ -23,7 +23,7 @@ const Post = () => {
     <CardMedia
       component="img"
       height="350"
-      image="https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image="https://images.pexels.com/photos/8919190/pexels-photo-8919190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Paella dish"
     />
     <CardContent>
