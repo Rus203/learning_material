@@ -5,16 +5,18 @@ import Navbar from './Components/Navbar'
 import Feed from './Components/Feed'
 import RightBar from './Components/RightBar'
 import SideBar from './Components/SideBar'
+import Add from './Components/Add'
 
 function App () {
   return (
     <div className='App'>
         <Navbar />
-        <Stack direction="row" justifyContent="space-evenly" spacing={2}>
+        <Stack direction="row" justifyContent="space-between" >
           <SideBar />
           <Feed />
           <RightBar />
         </Stack>
+        <Add />
     </div>
   )
 }
