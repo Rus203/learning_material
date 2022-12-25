@@ -8,7 +8,8 @@ import {
 
 const SideBar = () => {
   return (
-    <Box p={2} flex={1}>
+    <Box p={2} flex={1} sx={{ display: { xs: 'none', sm: 'block' } }}>
+      <Box position="fixed">
       <List>
         <ListItem disablePadding>
           <ListItemButton component='a' href='#simple-list'>
@@ -82,6 +83,7 @@ const SideBar = () => {
           </ListItemButton>
         </ListItem>
       </List>
+      </Box>
     </Box>
   )
 }
