@@ -11,9 +11,9 @@ function App () {
     <div className='App'>
         <Navbar />
         <Stack direction="row" justifyContent="space-evenly" spacing={2}>
-          <RightBar />
-          <Feed />
           <SideBar />
+          <Feed />
+          <RightBar />
         </Stack>
     </div>
   )
