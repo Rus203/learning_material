@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, AppBar, Toolbar, Typography, InputBase, styled, Badge, Avatar, Menu, MenuItem } from '@mui/material'
+import { AppBar, Toolbar, Typography, InputBase, styled, Badge, Avatar, Menu, MenuItem } from '@mui/material'
 import { Pets as PetsIcon, Mail as MailIcon, Notifications as NotificationsIcon } from '@mui/icons-material'
 
 const StyledToolbar = styled(Toolbar)({
@@ -34,55 +34,55 @@ const UserBox = styled('Box')(({ theme }) => ({
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-  return <Box>
-  <AppBar position="sticky">
-    <StyledToolbar>
-      <Typography variant="h6" sx={{ display: { xs: 'none', sm: 'block' } }} >Lama Dev</Typography>
-      <PetsIcon sx={{ display: { xs: 'block', sm: 'none' } }} />
-      <Search><InputBase placeholder="search..." /></Search>
-      <Icons>
-        <Badge badgeContent={4} color="error">
-        <MailIcon />
-      </Badge>
-      <Badge badgeContent={7} color="error">
-        <NotificationsIcon />
-      </Badge>
-      <Avatar
-        sx={{ width: '35px', height: '35px' }}
-        alt="Cindy Baker"
-        src="https://images.pexels.com/photos/8566465/pexels-photo-8566465.jpeg"
-        onClick={e => setOpen(true)}
-        />
-      </Icons>
-      <UserBox onClick={e => setOpen(true)}>
+  return (
+    <AppBar position="sticky">
+      <StyledToolbar>
+        <Typography variant="h6" sx={{ display: { xs: 'none', sm: 'block' } }} >Lama Dev</Typography>
+        <PetsIcon sx={{ display: { xs: 'block', sm: 'none' } }} />
+        <Search><InputBase placeholder="search..." /></Search>
+        <Icons>
+          <Badge badgeContent={4} color="error">
+          <MailIcon />
+        </Badge>
+        <Badge badgeContent={7} color="error">
+          <NotificationsIcon />
+        </Badge>
         <Avatar
           sx={{ width: '35px', height: '35px' }}
           alt="Cindy Baker"
-          src="https://images.pexels.com/photos/8566465/pexels-photo-8566465.jpeg" >
-        </Avatar>
-        <Typography variant="span">Freeman</Typography>
-      </UserBox>
-    </StyledToolbar>
-    <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        open={open}
-        onClose={e => setOpen(false)}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'right'
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left'
-        }}
-      >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
-      </Menu>
-  </AppBar>
-</Box>
+          src="https://images.pexels.com/photos/8566465/pexels-photo-8566465.jpeg"
+          onClick={e => setOpen(true)}
+          />
+        </Icons>
+        <UserBox onClick={e => setOpen(true)}>
+          <Avatar
+            sx={{ width: '35px', height: '35px' }}
+            alt="Cindy Baker"
+            src="https://images.pexels.com/photos/8566465/pexels-photo-8566465.jpeg" >
+          </Avatar>
+          <Typography variant="span">Freeman</Typography>
+        </UserBox>
+      </StyledToolbar>
+      <Menu
+          id="demo-positioned-menu"
+          aria-labelledby="demo-positioned-button"
+          open={open}
+          onClose={e => setOpen(false)}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right'
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left'
+          }}
+        >
+          <MenuItem>Profile</MenuItem>
+          <MenuItem>My account</MenuItem>
+          <MenuItem>Logout</MenuItem>
+        </Menu>
+    </AppBar>
+  )
 }
 
 export default Navbar
