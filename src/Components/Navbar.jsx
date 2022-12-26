@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Typography, InputBase, styled, Badge, Avatar, Menu, MenuItem } from '@mui/material'
+import { Box, AppBar, Toolbar, Typography, InputBase, styled, Badge, Avatar, Menu, MenuItem } from '@mui/material'
 import { Pets as PetsIcon, Mail as MailIcon, Notifications as NotificationsIcon } from '@mui/icons-material'
 
 const StyledToolbar = styled(Toolbar)({
@@ -23,7 +23,7 @@ const Icons = styled('div')(({ theme }) => ({
   }
 }))
 
-const UserBox = styled('Box')(({ theme }) => ({
+const UserBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '10px',
