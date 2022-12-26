@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 const Feed = () => {
   return (
-    <Box p={1} flex={4}>
+    <Box p={2} flex={4}>
       <Post />
       <Post />
       <Post />
