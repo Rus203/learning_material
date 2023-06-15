@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  material-ui:
+    container_name: material-ui
+    build: ./
+    ports:
+      - 9000:3000
